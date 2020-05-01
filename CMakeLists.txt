@@ -24,7 +24,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #    endif()
 #endif()
 
-find_package(Qt5 COMPONENTS Widgets PrintSupport REQUIRED)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 if(ANDROID)
   add_library(notepad SHARED
@@ -32,6 +32,7 @@ if(ANDROID)
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+
   )
 else()
   add_executable(notepad
@@ -39,10 +40,9 @@ else()
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    res.qrc
   )
 endif()
 
 
 
-target_link_libraries(notepad PRIVATE Qt5::Widgets Qt5::PrintSupport)
+target_link_libraries(notepad PRIVATE Qt5::Widgets)

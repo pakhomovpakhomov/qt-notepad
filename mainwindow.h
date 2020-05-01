@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QMessageBox>
+#include <QtWidgets>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +27,8 @@ private slots:
     void on_actionOpen_triggered();
 
     void on_actionSave_as_triggered();
+
+    void comboBoxTest();
 
 private:
     Ui::MainWindow *ui;

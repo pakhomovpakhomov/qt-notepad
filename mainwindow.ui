@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>796</width>
-    <height>556</height>
+    <width>471</width>
+    <height>464</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,6 +25,9 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item>
       <widget class="QTextEdit" name="textEdit"/>
      </item>
     </layout>
@@ -38,7 +41,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>796</width>
+     <width>471</width>
      <height>25</height>
     </rect>
    </property>

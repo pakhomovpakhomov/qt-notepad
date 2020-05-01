@@ -6,7 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setCentralWidget(ui->textEdit);
+    /*this->setCentralWidget(ui->textEdit);
+     * TODO: Настроить размещение элементов */
 }
 
 MainWindow::~MainWindow()
@@ -33,17 +34,12 @@ void MainWindow::on_actionOpen_triggered()
     }
     setWindowTitle(filename);
     QTextStream in(&file);
-    for (int i = 0; i != EOF; i++) {
+    for (int i = 0; !in.atEnd(); i++) {
         QString text = in.read(1);
-        if (text != "[")
-            ui->textEdit->append(text);
-        else
-        {
-
-        }
+        ui->textEdit->insertPlainText(text);
+        if (text == "[")
+            emit comboBoxTest();
     }
-    QString text = in.readAll();
-    ui->textEdit->append(text);
     file.close();
 }
 
@@ -61,5 +57,20 @@ void MainWindow::on_actionSave_as_triggered()
     QString text = ui->textEdit->toPlainText();
     out << text;
     file.close();
+}
+
+void MainWindow::comboBoxTest()
+{
+    QStringList lst;
+    lst << "Linux" << "Windows" << "MacOSX" << "Android";
+    ui->comboBox->addItems(lst);
+
+    /*
+    QStringList lst;
+    QComboBox lwg;
+    lst << "Linux" << "Windows" << "MacOSX" << "Android";
+    lwg.addItems(lst);
+    lwg.show();
+    qDebug("Open");*/
 }
 
