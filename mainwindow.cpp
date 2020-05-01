@@ -37,8 +37,8 @@ void MainWindow::on_actionOpen_triggered()
     for (int i = 0; !in.atEnd(); i++) {
         QString text = in.read(1);
         ui->textEdit->insertPlainText(text);
-        if (text == "[")
-            emit comboBoxTest();
+        if (text == "[")                     // TODO: В принципе бесполезно на данном этапе
+            emit comboBox_addElements();
     }
     file.close();
 }
@@ -59,18 +59,15 @@ void MainWindow::on_actionSave_as_triggered()
     file.close();
 }
 
-void MainWindow::comboBoxTest()
+void MainWindow::comboBox_addElements()
 {
     QStringList lst;
-    lst << "Linux" << "Windows" << "MacOSX" << "Android";
+    lst << "Linux" << "Windows" << "MacOSX" << "Android";  // TODO: сделать загрузку вариантов из нужных файлов для нужных файлов
     ui->comboBox->addItems(lst);
-
-    /*
-    QStringList lst;
-    QComboBox lwg;
-    lst << "Linux" << "Windows" << "MacOSX" << "Android";
-    lwg.addItems(lst);
-    lwg.show();
-    qDebug("Open");*/
 }
 
+
+void MainWindow::on_comboBox_activated(const QString &arg1)
+{
+    ui->textEdit->insertPlainText(arg1);
+}
