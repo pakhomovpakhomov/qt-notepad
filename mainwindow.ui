@@ -58,8 +58,16 @@
      <string>Edit</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuCases">
+    <property name="title">
+     <string>Cases</string>
+    </property>
+    <addaction name="actionLoad_case"/>
+    <addaction name="actionSave_case"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuCases"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -124,6 +132,16 @@
   <action name="actionRedo">
    <property name="text">
     <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionLoad_case">
+   <property name="text">
+    <string>Open case</string>
+   </property>
+  </action>
+  <action name="actionSave_case">
+   <property name="text">
+    <string>Save case</string>
    </property>
   </action>
  </widget>

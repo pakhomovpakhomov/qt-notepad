@@ -28,9 +28,13 @@ private slots:
 
     void on_actionSave_as_triggered();
 
-    void comboBox_addElements();
+    void comboBox_addElements(QStringList &lst);
 
     void on_comboBox_activated(const QString &arg1);
+
+    void on_actionLoad_case_triggered();
+
+    void on_actionSave_case_triggered();
 
 private:
     Ui::MainWindow *ui;
