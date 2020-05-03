@@ -6,32 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>471</width>
-    <height>464</height>
+    <width>426</width>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>781</width>
-      <height>541</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QComboBox" name="comboBox"/>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="enabled">
@@ -41,7 +42,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>471</width>
+     <width>426</width>
      <height>25</height>
     </rect>
    </property>
@@ -53,11 +54,6 @@
     <addaction name="actionOpen"/>
     <addaction name="actionSave_as"/>
    </widget>
-   <widget class="QMenu" name="menuEdit">
-    <property name="title">
-     <string>Edit</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menuCases">
     <property name="title">
      <string>Cases</string>
@@ -66,7 +62,6 @@
     <addaction name="actionSave_case"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuEdit"/>
    <addaction name="menuCases"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -142,6 +137,11 @@
   <action name="actionSave_case">
    <property name="text">
     <string>Save case</string>
+   </property>
+  </action>
+  <action name="actionRecent">
+   <property name="text">
+    <string>Recent</string>
    </property>
   </action>
  </widget>

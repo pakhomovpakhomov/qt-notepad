@@ -8,9 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->comboBox->setEditable(true);
-    /*this->setCentralWidget(ui->textEdit);
-     * TODO: Настроить размещение элементов */
 }
 
 MainWindow::~MainWindow()
